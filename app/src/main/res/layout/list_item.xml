@@ -32,7 +32,8 @@
             android:minHeight="@dimen/list_item_height"
             android:minWidth="@dimen/list_item_height"
             android:background="@color/category_numbers"
-            android:paddingLeft="@dimen/activity_horizontal_margin">
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:layout_weight="2" >
 
             <TextView
                 android:id="@+id/listItemJapan"
@@ -44,6 +45,18 @@
                 style="@style/ListStyle"
                 tools:text="EnSample" />
         </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/category_numbers"
+            android:minHeight="@dimen/list_item_height"
+            android:minWidth="@dimen/list_item_arrow_width"
+            android:src="@drawable/sharp_play_arrow_white_24dp"
+            android:paddingRight="@dimen/activity_horizontal_margin" />
 
     </LinearLayout>
 

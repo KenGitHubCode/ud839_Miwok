@@ -1,15 +1,13 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
 
@@ -22,6 +20,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     private static final String LOG_TAG = WordAdapter.class.getSimpleName();
     private int viewBGColor;
+
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
      * The context is used to inflate the layout file, and the list is the data we want
@@ -59,7 +58,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
 
-
         // Get the {@link Word} object located at this position in the list
         Word currentWord = getItem(position);
 
@@ -90,14 +88,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // so that it can be shown in the ListView
 
 
-
         //backgorund
         View textContainer = listItemView.findViewById(R.id.wordsLayout);
+        View playButtonContainter = listItemView.findViewById(R.id.play_button);
         //find the value of the color through below single line
         int color = ContextCompat.getColor(getContext(), viewBGColor);
         textContainer.setBackgroundColor(color);
-
-
+        playButtonContainter.setBackgroundColor(color);
         return listItemView;
     }
 }
