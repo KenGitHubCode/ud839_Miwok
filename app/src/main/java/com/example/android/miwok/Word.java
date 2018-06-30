@@ -29,6 +29,13 @@ public class Word {
     }
 
     //constructor with THREE elemnets
+    public Word(String jWordInput, int itemAudioInput,String eWordInput ){
+        jWord = jWordInput;
+        eWord = eWordInput;
+        audioResourceID = itemAudioInput;
+    }
+
+    //constructor with FOUR elemnets
     public Word(String jWordInput, String eWordInput, int itemImageInput, int itemAudioInput){
         jWord = jWordInput;
         eWord = eWordInput;
